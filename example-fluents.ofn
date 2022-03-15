@@ -1,0 +1,278 @@
+Prefix(:=<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(pwo:=<http://purl.org/spar/pwo/>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(gdpr:=<http://dana.fokus.fraunhofer.de/recomp/ontologies/gdpr#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(time:=<http://www.w3.org/2006/time#>)
+Prefix(error:=<http://www.essepuntato.it/2009/10/error#>)
+Prefix(partof:=<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#>)
+Prefix(pronto:=<https://w3id.org/ontology/pronto#>)
+Prefix(region:=<http://www.ontologydesignpatterns.org/cp/owl/region.owl#>)
+Prefix(sequence:=<http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#>)
+Prefix(taskrole:=<http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#>)
+Prefix(agentrole:=<http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#>)
+Prefix(basicplan:=<http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#>)
+Prefix(parameter:=<http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#>)
+Prefix(situation:=<http://www.ontologydesignpatterns.org/cp/owl/situation.owl#>)
+Prefix(objectrole:=<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#>)
+Prefix(controlflow:=<http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl#>)
+Prefix(description:=<http://www.ontologydesignpatterns.org/cp/owl/description.owl#>)
+Prefix(timeinterval:=<http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#>)
+Prefix(participation:=<http://www.ontologydesignpatterns.org/cp/owl/participation.owl#>)
+Prefix(taskexecution:=<http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#>)
+Prefix(classification:=<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#>)
+Prefix(basicplanexecution:=<http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#>)
+Prefix(cpannotationschema:=<http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#>)
+Prefix(basicplandescription:=<http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#>)
+Prefix(timeindexedsituation:=<http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#>)
+
+
+Ontology(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents>
+Import(<http://dana.fokus.fraunhofer.de/recomp/ontologies/gdpr>)
+
+Declaration(Class(:Advertising))
+Declaration(Class(:AnalyzableAt))
+Declaration(Class(:Country))
+Declaration(Class(:Marketing))
+Declaration(Class(:Optimization))
+Declaration(Class(:Resource))
+Declaration(Class(:Server))
+Declaration(ObjectProperty(:allowedPurpose))
+Declaration(ObjectProperty(:arc))
+Declaration(ObjectProperty(:connected))
+Declaration(ObjectProperty(:dataLocation))
+Declaration(ObjectProperty(:destination))
+Declaration(ObjectProperty(:hasData))
+Declaration(ObjectProperty(:hasLocation))
+Declaration(ObjectProperty(:hasPurpose))
+Declaration(ObjectProperty(:nodeRegion))
+Declaration(ObjectProperty(:operatedBy))
+Declaration(ObjectProperty(:origin))
+Declaration(DataProperty(:cost))
+Declaration(NamedIndividual(:AnalysableAt_habit_marketing_node4))
+Declaration(NamedIndividual(:AnalyzableAt_behavior_advertising_node4))
+Declaration(NamedIndividual(:AnalyzableAt_behavior_marketing_node4))
+Declaration(NamedIndividual(:AnalyzableAt_behavior_optimizing_node6))
+Declaration(NamedIndividual(:AnalyzableAt_habit_advertising_node4))
+Declaration(NamedIndividual(:AnalyzableAt_habit_optimizing_node6))
+Declaration(NamedIndividual(:CompanyA))
+Declaration(NamedIndividual(:CompanyB))
+Declaration(NamedIndividual(:CountryX))
+Declaration(NamedIndividual(:CountryY))
+Declaration(NamedIndividual(:Transfer_2_3))
+Declaration(NamedIndividual(:advertising1))
+Declaration(NamedIndividual(:dataBehavior))
+Declaration(NamedIndividual(:dataHabit))
+Declaration(NamedIndividual(:marketing1))
+Declaration(NamedIndividual(:node1))
+Declaration(NamedIndividual(:node2))
+Declaration(NamedIndividual(:node3))
+Declaration(NamedIndividual(:node4))
+Declaration(NamedIndividual(:node5))
+Declaration(NamedIndividual(:node6))
+Declaration(NamedIndividual(:node7))
+Declaration(NamedIndividual(:optimization1))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :allowedPurpose (:allowedPurpose)
+
+AnnotationAssertion(rdfs:comment :allowedPurpose "TODO: If we use Pronto, ask Monica how to model the fact that A has given permission to B to do C."^^xsd:string)
+
+# Object Property: :arc (:arc)
+
+SubObjectPropertyOf(:arc owl:topObjectProperty)
+SymmetricObjectProperty(:arc)
+
+# Object Property: :connected (:connected)
+
+SubObjectPropertyOf(:connected owl:topObjectProperty)
+SymmetricObjectProperty(:connected)
+
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Advertising (:Advertising)
+
+SubClassOf(:Advertising pronto:Purpose)
+
+# Class: :Marketing (:Marketing)
+
+SubClassOf(:Marketing pronto:Purpose)
+
+# Class: :Optimization (:Optimization)
+
+SubClassOf(:Optimization pronto:Purpose)
+
+# Class: :Server (:Server)
+
+SubClassOf(:Server :Resource)
+
+# Class: pronto:Data (pronto:Data)
+
+SubClassOf(pronto:Data ObjectExactCardinality(1 :dataLocation :Server))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :AnalysableAt_habit_marketing_node4 (:AnalysableAt_habit_marketing_node4)
+
+ClassAssertion(:AnalyzableAt :AnalysableAt_habit_marketing_node4)
+ObjectPropertyAssertion(:hasData :AnalysableAt_habit_marketing_node4 :dataHabit)
+ObjectPropertyAssertion(:hasLocation :AnalysableAt_habit_marketing_node4 :node4)
+ObjectPropertyAssertion(:hasPurpose :AnalysableAt_habit_marketing_node4 :marketing1)
+
+# Individual: :AnalyzableAt_behavior_advertising_node4 (:AnalyzableAt_behavior_advertising_node4)
+
+ClassAssertion(:AnalyzableAt :AnalyzableAt_behavior_advertising_node4)
+ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_advertising_node4 :dataBehavior)
+ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_advertising_node4 :node4)
+ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_advertising_node4 :advertising1)
+
+# Individual: :AnalyzableAt_behavior_marketing_node4 (:AnalyzableAt_behavior_marketing_node4)
+
+ClassAssertion(:AnalyzableAt :AnalyzableAt_behavior_marketing_node4)
+ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_marketing_node4 :dataBehavior)
+ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_marketing_node4 :node4)
+ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_marketing_node4 :marketing1)
+
+# Individual: :AnalyzableAt_behavior_optimizing_node6 (:AnalyzableAt_behavior_optimizing_node6)
+
+ClassAssertion(:AnalyzableAt :AnalyzableAt_behavior_optimizing_node6)
+ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_optimizing_node6 :dataBehavior)
+ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_optimizing_node6 :node6)
+ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_optimizing_node6 :optimization1)
+
+# Individual: :AnalyzableAt_habit_advertising_node4 (:AnalyzableAt_habit_advertising_node4)
+
+ClassAssertion(:AnalyzableAt :AnalyzableAt_habit_advertising_node4)
+ObjectPropertyAssertion(:hasData :AnalyzableAt_habit_advertising_node4 :dataHabit)
+ObjectPropertyAssertion(:hasLocation :AnalyzableAt_habit_advertising_node4 :node4)
+ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_habit_advertising_node4 :advertising1)
+
+# Individual: :AnalyzableAt_habit_optimizing_node6 (:AnalyzableAt_habit_optimizing_node6)
+
+ClassAssertion(:AnalyzableAt :AnalyzableAt_habit_optimizing_node6)
+ObjectPropertyAssertion(:hasData :AnalyzableAt_habit_optimizing_node6 :dataHabit)
+ObjectPropertyAssertion(:hasLocation :AnalyzableAt_habit_optimizing_node6 :node6)
+ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_habit_optimizing_node6 :optimization1)
+
+# Individual: :CompanyA (:CompanyA)
+
+ClassAssertion(pronto:InternationalOrganization :CompanyA)
+
+# Individual: :CompanyB (:CompanyB)
+
+ClassAssertion(pronto:InternationalOrganization :CompanyB)
+
+# Individual: :CountryX (:CountryX)
+
+ClassAssertion(:Country :CountryX)
+
+# Individual: :CountryY (:CountryY)
+
+ClassAssertion(:Country :CountryY)
+
+# Individual: :Transfer_2_3 (:Transfer_2_3)
+
+ClassAssertion(pronto:Transmit :Transfer_2_3)
+ObjectPropertyAssertion(:destination :Transfer_2_3 :node3)
+ObjectPropertyAssertion(:origin :Transfer_2_3 :node2)
+
+# Individual: :advertising1 (:advertising1)
+
+ClassAssertion(:Advertising :advertising1)
+
+# Individual: :dataBehavior (:dataBehavior)
+
+ClassAssertion(pronto:Data :dataBehavior)
+ObjectPropertyAssertion(:allowedPurpose :dataBehavior :advertising1)
+ObjectPropertyAssertion(:allowedPurpose :dataBehavior :marketing1)
+ObjectPropertyAssertion(:allowedPurpose :dataBehavior :optimization1)
+ObjectPropertyAssertion(:dataLocation :dataBehavior :node2)
+
+# Individual: :dataHabit (:dataHabit)
+
+ClassAssertion(pronto:Data :dataHabit)
+ObjectPropertyAssertion(:allowedPurpose :dataHabit :advertising1)
+ObjectPropertyAssertion(:allowedPurpose :dataHabit :marketing1)
+ObjectPropertyAssertion(:allowedPurpose :dataHabit :optimization1)
+
+# Individual: :marketing1 (:marketing1)
+
+ClassAssertion(:Marketing :marketing1)
+
+# Individual: :node1 (:node1)
+
+ClassAssertion(:Server :node1)
+ObjectPropertyAssertion(:arc :node1 :node2)
+ObjectPropertyAssertion(:arc :node1 :node4)
+ObjectPropertyAssertion(:arc :node1 :node6)
+ObjectPropertyAssertion(:nodeRegion :node1 :CountryX)
+ObjectPropertyAssertion(:operatedBy :node1 :CompanyA)
+
+# Individual: :node2 (:node2)
+
+ClassAssertion(:Server :node2)
+ObjectPropertyAssertion(:arc :node2 :node3)
+ObjectPropertyAssertion(:nodeRegion :node2 :CountryY)
+ObjectPropertyAssertion(:operatedBy :node2 :CompanyA)
+
+# Individual: :node3 (:node3)
+
+ClassAssertion(:Server :node3)
+ObjectPropertyAssertion(:arc :node3 :node4)
+ObjectPropertyAssertion(:arc :node3 :node5)
+ObjectPropertyAssertion(:nodeRegion :node3 :CountryY)
+ObjectPropertyAssertion(:operatedBy :node3 :CompanyA)
+
+# Individual: :node4 (:node4)
+
+ClassAssertion(:Server :node4)
+ObjectPropertyAssertion(:arc :node4 :node7)
+ObjectPropertyAssertion(:nodeRegion :node4 :CountryY)
+ObjectPropertyAssertion(:operatedBy :node4 :CompanyA)
+
+# Individual: :node5 (:node5)
+
+ClassAssertion(:Server :node5)
+ObjectPropertyAssertion(:arc :node5 :node7)
+ObjectPropertyAssertion(:nodeRegion :node5 :CountryY)
+ObjectPropertyAssertion(:operatedBy :node5 :CompanyA)
+
+# Individual: :node6 (:node6)
+
+ClassAssertion(:Server :node6)
+ObjectPropertyAssertion(:arc :node6 :node7)
+ObjectPropertyAssertion(:nodeRegion :node6 :CountryX)
+ObjectPropertyAssertion(:operatedBy :node6 :CompanyB)
+
+# Individual: :node7 (:node7)
+
+ClassAssertion(:Server :node7)
+ObjectPropertyAssertion(:nodeRegion :node7 :CountryY)
+ObjectPropertyAssertion(:operatedBy :node7 :CompanyB)
+
+# Individual: :optimization1 (:optimization1)
+
+ClassAssertion(:Optimization :optimization1)
+
+
+DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node1) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node2))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "1"^^xsd:integer)))
+DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node2) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node3))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "2"^^xsd:integer)))
+DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node1) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node4))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "1"^^xsd:integer)))
+DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node1) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node6))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "1"^^xsd:integer)))
+DLSafeRule(Body(ObjectPropertyAtom(:arc Variable(<urn:swrl:var#Node1>) Variable(<urn:swrl:var#Node2>)))Head(ObjectPropertyAtom(:connected Variable(<urn:swrl:var#Node1>) Variable(<urn:swrl:var#Node2>))))
+DLSafeRule(Body(ObjectPropertyAtom(:arc Variable(<urn:swrl:var#Node2>) Variable(<urn:swrl:var#Node1>)))Head(ObjectPropertyAtom(:connected Variable(<urn:swrl:var#Node1>) Variable(<urn:swrl:var#Node2>))))
+)

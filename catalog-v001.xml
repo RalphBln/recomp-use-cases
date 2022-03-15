@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.w3.org/2006/time" uri="imports/pronto-imports/time.time%232016.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl" uri="imports/pronto-imports/timeinterval.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl" uri="imports/pronto-imports/timeindexedsituation.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl" uri="imports/pronto-imports/taskexecution.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl" uri="imports/pronto-imports/controlflow.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl" uri="imports/pronto-imports/situation.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/region.owl" uri="imports/pronto-imports/region.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/participation.owl" uri="imports/pronto-imports/participation.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl" uri="imports/pronto-imports/basicplanexecution.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl" uri="imports/pronto-imports/taskrole.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl" uri="imports/pronto-imports/sequence.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/partof.owl" uri="imports/pronto-imports/partof.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl" uri="imports/pronto-imports/parameter.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/description.owl" uri="imports/pronto-imports/description.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl" uri="imports/pronto-imports/basicplandescription.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl" uri="imports/pronto-imports/cpannotationschema.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/classification.owl" uri="imports/pronto-imports/classification.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl" uri="imports/pronto-imports/objectrole.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl" uri="imports/pronto-imports/agentrole.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl" uri="imports/pronto-imports/basicplan.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.org/spar/error" uri="imports/pronto-imports/error.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.org/spar/pwo/2017-06-01" uri="imports/pronto-imports/pwo.2017-06-01.owl"/>
+    <uri id="User Entered Import Resolution" name="http://dana.fokus.fraunhofer.de/recomp/ontologies/gdpr" uri="gdpr.ofn"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/ontology/pronto" uri="imports/pronto.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://purl.org/spar/pwo/" uri="imports/pronto-imports/pwo.2017-06-01.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.essepuntato.it/2009/10/error" uri="imports/pronto-imports/error.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl" uri="imports/pronto-imports/agentrole.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl" uri="imports/pronto-imports/basicplan.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl" uri="imports/pronto-imports/basicplandescription.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl" uri="imports/pronto-imports/basicplanexecution.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/classification.owl" uri="imports/pronto-imports/classification.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl" uri="imports/pronto-imports/controlflow.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/description.owl" uri="imports/pronto-imports/description.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl" uri="imports/pronto-imports/objectrole.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl" uri="imports/pronto-imports/parameter.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/participation.owl" uri="imports/pronto-imports/participation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/partof.owl" uri="imports/pronto-imports/partof.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/region.owl" uri="imports/pronto-imports/region.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl" uri="imports/pronto-imports/sequence.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/situation.owl" uri="imports/pronto-imports/situation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl" uri="imports/pronto-imports/taskexecution.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl" uri="imports/pronto-imports/taskrole.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl" uri="imports/pronto-imports/timeindexedsituation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl" uri="imports/pronto-imports/timeinterval.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl" uri="imports/pronto-imports/cpannotationschema.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="http://www.w3.org/2006/time" uri="imports/pronto-imports/time.time%232016.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1647378274812" name="https://w3id.org/ontology/pronto" uri="imports/pronto.owl"/>
+    </group>
+</catalog>

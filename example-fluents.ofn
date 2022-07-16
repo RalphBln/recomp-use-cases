@@ -7,7 +7,7 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(gdpr:=<http://dana.fokus.fraunhofer.de/recomp/ontologies/gdpr#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(time:=<http://www.w3.org/2006/time#>)
-Prefix(error:=<http://www.essepuntato.it/2009/10/error#>)
+Prefix(error:=<http://www.essepuntato.it/2009/10/error/>)
 Prefix(partof:=<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#>)
 Prefix(pronto:=<https://w3id.org/ontology/pronto#>)
 Prefix(region:=<http://www.ontologydesignpatterns.org/cp/owl/region.owl#>)
@@ -17,6 +17,7 @@ Prefix(agentrole:=<http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#>)
 Prefix(basicplan:=<http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#>)
 Prefix(parameter:=<http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#>)
 Prefix(situation:=<http://www.ontologydesignpatterns.org/cp/owl/situation.owl#>)
+Prefix(aspectswrl:=<https://ontology.aspectowl.xyz/built-ins/5.2.0/AspectSWRLBuiltinsLibrary.owl#>)
 Prefix(objectrole:=<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#>)
 Prefix(controlflow:=<http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl#>)
 Prefix(description:=<http://www.ontologydesignpatterns.org/cp/owl/description.owl#>)
@@ -34,23 +35,40 @@ Ontology(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents>
 Import(<http://dana.fokus.fraunhofer.de/recomp/ontologies/gdpr>)
 
 Declaration(Class(:Advertising))
-Declaration(Class(:AnalyzableAt))
+Declaration(Class(:Analysis))
+Declaration(Class(:AnalyzerLocation))
+Declaration(Class(:Aspect))
+Declaration(Class(:Collect))
+Declaration(Class(:CompanyAAllowedToCollectBobsDataAspect))
+Declaration(Class(:Consent))
+Declaration(Class(:ContractBobCompanyAExistsAspect))
 Declaration(Class(:Country))
+Declaration(Class(:Deontic))
+Declaration(Class(:LegallyPermissible))
 Declaration(Class(:Marketing))
 Declaration(Class(:Optimization))
 Declaration(Class(:Resource))
 Declaration(Class(:Server))
+Declaration(ObjectProperty(:accessibilityRelation))
+Declaration(ObjectProperty(:actedBy))
+Declaration(ObjectProperty(:allowedLocation))
 Declaration(ObjectProperty(:allowedPurpose))
+Declaration(ObjectProperty(:allowsAction))
 Declaration(ObjectProperty(:arc))
+Declaration(ObjectProperty(:collectsDataFrom))
 Declaration(ObjectProperty(:connected))
 Declaration(ObjectProperty(:dataLocation))
+Declaration(ObjectProperty(:deletes))
 Declaration(ObjectProperty(:destination))
 Declaration(ObjectProperty(:hasData))
 Declaration(ObjectProperty(:hasLocation))
 Declaration(ObjectProperty(:hasPurpose))
-Declaration(ObjectProperty(:nodeRegion))
+Declaration(ObjectProperty(:hasSubject))
+Declaration(ObjectProperty(:legallyAccepts))
 Declaration(ObjectProperty(:operatedBy))
 Declaration(ObjectProperty(:origin))
+Declaration(ObjectProperty(:ownedBy))
+Declaration(ObjectProperty(:serverLocation))
 Declaration(DataProperty(:cost))
 Declaration(NamedIndividual(:AnalysableAt_habit_marketing_node4))
 Declaration(NamedIndividual(:AnalyzableAt_behavior_advertising_node4))
@@ -58,10 +76,18 @@ Declaration(NamedIndividual(:AnalyzableAt_behavior_marketing_node4))
 Declaration(NamedIndividual(:AnalyzableAt_behavior_optimizing_node6))
 Declaration(NamedIndividual(:AnalyzableAt_habit_advertising_node4))
 Declaration(NamedIndividual(:AnalyzableAt_habit_optimizing_node6))
+Declaration(NamedIndividual(:Bob))
+Declaration(NamedIndividual(:CollectionActionBobsData1))
 Declaration(NamedIndividual(:CompanyA))
 Declaration(NamedIndividual(:CompanyB))
+Declaration(NamedIndividual(:ConsentActionBobMarketing1))
+Declaration(NamedIndividual(:ConsentBobMarketing1))
+Declaration(NamedIndividual(:ConsentRevocationBobMarketing1))
 Declaration(NamedIndividual(:CountryX))
 Declaration(NamedIndividual(:CountryY))
+Declaration(NamedIndividual(:RevokeConsentBobMarketing1))
+Declaration(NamedIndividual(:T1))
+Declaration(NamedIndividual(:T2))
 Declaration(NamedIndividual(:Transfer_2_3))
 Declaration(NamedIndividual(:advertising1))
 Declaration(NamedIndividual(:dataBehavior))
@@ -75,24 +101,73 @@ Declaration(NamedIndividual(:node5))
 Declaration(NamedIndividual(:node6))
 Declaration(NamedIndividual(:node7))
 Declaration(NamedIndividual(:optimization1))
+Declaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))
 
 ############################
 #   Object Properties
 ############################
 
+# Object Property: :accessibilityRelation (:accessibilityRelation)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :accessibilityRelation <http://orcid.org/0000-0002-4349-6726>)
+
+# Object Property: :actedBy (:actedBy)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :actedBy <http://orcid.org/0000-0002-4349-6726>)
+ObjectPropertyDomain(:actedBy pwo:Action)
+ObjectPropertyRange(:actedBy agentrole:Agent)
+
+# Object Property: :allowedLocation (:allowedLocation)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :allowedLocation <http://orcid.org/0000-0002-4349-6726>)
+
 # Object Property: :allowedPurpose (:allowedPurpose)
 
 AnnotationAssertion(rdfs:comment :allowedPurpose "TODO: If we use Pronto, ask Monica how to model the fact that A has given permission to B to do C."^^xsd:string)
+
+# Object Property: :allowsAction (:allowsAction)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :allowsAction <http://orcid.org/0000-0002-4349-6726>)
+ObjectPropertyDomain(:allowsAction pronto:Contract)
+ObjectPropertyRange(:allowsAction pwo:Action)
 
 # Object Property: :arc (:arc)
 
 SubObjectPropertyOf(:arc owl:topObjectProperty)
 SymmetricObjectProperty(:arc)
 
+# Object Property: :collectsDataFrom (:collectsDataFrom)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :collectsDataFrom <http://orcid.org/0000-0002-4349-6726>)
+
 # Object Property: :connected (:connected)
 
 SubObjectPropertyOf(:connected owl:topObjectProperty)
 SymmetricObjectProperty(:connected)
+
+# Object Property: :deletes (:deletes)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :deletes <http://orcid.org/0000-0002-4349-6726>)
+ObjectPropertyDomain(:deletes ObjectUnionOf(pwo:Step participation:Event))
+DisjointObjectProperties(:deletes pwo:produces)
+
+# Object Property: :hasSubject (:hasSubject)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :hasSubject <http://orcid.org/0000-0002-4349-6726>)
+ObjectPropertyDomain(:hasSubject :Collect)
+
+# Object Property: :legallyAccepts (:legallyAccepts)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :legallyAccepts <http://orcid.org/0000-0002-4349-6726>)
+SubObjectPropertyOf(:legallyAccepts :accessibilityRelation)
+
+# Object Property: :ownedBy (:ownedBy)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ownedBy <http://orcid.org/0000-0002-4349-6726>)
+
+# Object Property: pwo:happened (happened)
+
+ObjectPropertyRange(pwo:happened time:Instant)
 
 
 
@@ -104,6 +179,50 @@ SymmetricObjectProperty(:connected)
 # Class: :Advertising (:Advertising)
 
 SubClassOf(:Advertising pronto:Purpose)
+
+# Class: :Analysis (:Analysis)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Analysis <http://orcid.org/0000-0002-4349-6726>)
+SubClassOf(:Analysis pronto:PersonalDataProcessing)
+
+# Class: :Aspect (:Aspect)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Aspect <http://orcid.org/0000-0002-4349-6726>)
+
+# Class: :Collect (:Collect)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Collect <http://orcid.org/0000-0002-4349-6726>)
+EquivalentClasses(:Collect ObjectIntersectionOf(ObjectUnionOf(ObjectOneOf(:T1) ObjectHasValue(time:after :T1)) ObjectUnionOf(ObjectOneOf(:T2) ObjectHasValue(time:before :T2))))
+SubClassOf(:Collect taskexecution:Action)
+
+# Class: :CompanyAAllowedToCollectBobsDataAspect (:CompanyAAllowedToCollectBobsDataAspect)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :CompanyAAllowedToCollectBobsDataAspect <http://orcid.org/0000-0002-4349-6726>)
+EquivalentClasses(:CompanyAAllowedToCollectBobsDataAspect :ContractBobCompanyAExistsAspect)
+
+# Class: :Consent (:Consent)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Consent <http://orcid.org/0000-0002-4349-6726>)
+SubClassOf(:Consent pronto:Contract)
+
+# Class: :ContractBobCompanyAExistsAspect (:ContractBobCompanyAExistsAspect)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ContractBobCompanyAExistsAspect <http://orcid.org/0000-0002-4349-6726>)
+EquivalentClasses(:ContractBobCompanyAExistsAspect ObjectIntersectionOf(ObjectUnionOf(ObjectOneOf(:T1) ObjectHasValue(time:after :T1)) ObjectUnionOf(ObjectOneOf(:T2) ObjectHasValue(time:before :T2))))
+
+# Class: :Country (:Country)
+
+SubClassOf(:Country region:Region)
+
+# Class: :Deontic (:Deontic)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Deontic <http://orcid.org/0000-0002-4349-6726>)
+SubClassOf(:Deontic :Aspect)
+
+# Class: :LegallyPermissible (:LegallyPermissible)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :LegallyPermissible <http://orcid.org/0000-0002-4349-6726>)
+SubClassOf(:LegallyPermissible :Deontic)
 
 # Class: :Marketing (:Marketing)
 
@@ -128,53 +247,91 @@ SubClassOf(pronto:Data ObjectExactCardinality(1 :dataLocation :Server))
 
 # Individual: :AnalysableAt_habit_marketing_node4 (:AnalysableAt_habit_marketing_node4)
 
-ClassAssertion(:AnalyzableAt :AnalysableAt_habit_marketing_node4)
+ClassAssertion(:AnalyzerLocation :AnalysableAt_habit_marketing_node4)
 ObjectPropertyAssertion(:hasData :AnalysableAt_habit_marketing_node4 :dataHabit)
 ObjectPropertyAssertion(:hasLocation :AnalysableAt_habit_marketing_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalysableAt_habit_marketing_node4 :marketing1)
 
 # Individual: :AnalyzableAt_behavior_advertising_node4 (:AnalyzableAt_behavior_advertising_node4)
 
-ClassAssertion(:AnalyzableAt :AnalyzableAt_behavior_advertising_node4)
+ClassAssertion(:AnalyzerLocation :AnalyzableAt_behavior_advertising_node4)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_advertising_node4 :dataBehavior)
 ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_advertising_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_advertising_node4 :advertising1)
 
 # Individual: :AnalyzableAt_behavior_marketing_node4 (:AnalyzableAt_behavior_marketing_node4)
 
-ClassAssertion(:AnalyzableAt :AnalyzableAt_behavior_marketing_node4)
+ClassAssertion(:AnalyzerLocation :AnalyzableAt_behavior_marketing_node4)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_marketing_node4 :dataBehavior)
 ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_marketing_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_marketing_node4 :marketing1)
 
 # Individual: :AnalyzableAt_behavior_optimizing_node6 (:AnalyzableAt_behavior_optimizing_node6)
 
-ClassAssertion(:AnalyzableAt :AnalyzableAt_behavior_optimizing_node6)
+ClassAssertion(:AnalyzerLocation :AnalyzableAt_behavior_optimizing_node6)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_optimizing_node6 :dataBehavior)
 ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_optimizing_node6 :node6)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_optimizing_node6 :optimization1)
 
 # Individual: :AnalyzableAt_habit_advertising_node4 (:AnalyzableAt_habit_advertising_node4)
 
-ClassAssertion(:AnalyzableAt :AnalyzableAt_habit_advertising_node4)
+ClassAssertion(:AnalyzerLocation :AnalyzableAt_habit_advertising_node4)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_habit_advertising_node4 :dataHabit)
 ObjectPropertyAssertion(:hasLocation :AnalyzableAt_habit_advertising_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_habit_advertising_node4 :advertising1)
 
 # Individual: :AnalyzableAt_habit_optimizing_node6 (:AnalyzableAt_habit_optimizing_node6)
 
-ClassAssertion(:AnalyzableAt :AnalyzableAt_habit_optimizing_node6)
+ClassAssertion(:AnalyzerLocation :AnalyzableAt_habit_optimizing_node6)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_habit_optimizing_node6 :dataHabit)
 ObjectPropertyAssertion(:hasLocation :AnalyzableAt_habit_optimizing_node6 :node6)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_habit_optimizing_node6 :optimization1)
 
+# Individual: :Bob (:Bob)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Bob <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Person> :Bob)
+ClassAssertion(ObjectSomeValuesFrom(objectrole:hasRole pronto:DataSubject) :Bob)
+
+# Individual: :CollectionActionBobsData1 (:CollectionActionBobsData1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :CollectionActionBobsData1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(:Collect :CollectionActionBobsData1)
+ObjectPropertyAssertion(:hasSubject :CollectionActionBobsData1 :dataHabit)
+ObjectPropertyAssertion(basicplanexecution:actionHasParticipant :CollectionActionBobsData1 :CompanyA)
+
 # Individual: :CompanyA (:CompanyA)
 
-ClassAssertion(pronto:InternationalOrganization :CompanyA)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation> :CompanyA)
+ClassAssertion(ObjectSomeValuesFrom(objectrole:hasRole pronto:Controller) :CompanyA)
+ObjectPropertyAssertion(Aspect(:CompanyAAllowedToCollectBobsDataAspect) :collectsDataFrom :CompanyA :Bob)
 
 # Individual: :CompanyB (:CompanyB)
 
-ClassAssertion(pronto:InternationalOrganization :CompanyB)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation> :CompanyB)
+ClassAssertion(ObjectSomeValuesFrom(objectrole:hasRole pronto:Processor) :CompanyB)
+
+# Individual: :ConsentActionBobMarketing1 (:ConsentActionBobMarketing1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentActionBobMarketing1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(:ConsentAction :ConsentActionBobMarketing1)
+ObjectPropertyAssertion(:actedBy :ConsentActionBobMarketing1 :Bob)
+ObjectPropertyAssertion(pwo:happened :ConsentActionBobMarketing1 :T1)
+ObjectPropertyAssertion(pwo:produces :ConsentActionBobMarketing1 :ConsentBobMarketing1)
+
+# Individual: :ConsentBobMarketing1 (:ConsentBobMarketing1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentBobMarketing1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(:Consent :ConsentBobMarketing1)
+ObjectPropertyAssertion(:allowsAction :ConsentBobMarketing1 :CollectionActionBobsData1)
+
+# Individual: :ConsentRevocationBobMarketing1 (:ConsentRevocationBobMarketing1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentRevocationBobMarketing1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(pronto:Delete :ConsentRevocationBobMarketing1)
+ObjectPropertyAssertion(:actedBy :ConsentRevocationBobMarketing1 :Bob)
+ObjectPropertyAssertion(:deletes :ConsentRevocationBobMarketing1 :ConsentBobMarketing1)
+ObjectPropertyAssertion(pwo:happened :ConsentRevocationBobMarketing1 :T2)
 
 # Individual: :CountryX (:CountryX)
 
@@ -183,6 +340,21 @@ ClassAssertion(:Country :CountryX)
 # Individual: :CountryY (:CountryY)
 
 ClassAssertion(:Country :CountryY)
+
+# Individual: :RevokeConsentBobMarketing1 (:RevokeConsentBobMarketing1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :RevokeConsentBobMarketing1 <http://orcid.org/0000-0002-4349-6726>)
+
+# Individual: :T1 (:T1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :T1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(time:Instant :T1)
+
+# Individual: :T2 (:T2)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :T2 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(time:Instant :T2)
+ObjectPropertyAssertion(time:after :T2 :T1)
 
 # Individual: :Transfer_2_3 (:Transfer_2_3)
 
@@ -200,7 +372,7 @@ ClassAssertion(pronto:Data :dataBehavior)
 ObjectPropertyAssertion(:allowedPurpose :dataBehavior :advertising1)
 ObjectPropertyAssertion(:allowedPurpose :dataBehavior :marketing1)
 ObjectPropertyAssertion(:allowedPurpose :dataBehavior :optimization1)
-ObjectPropertyAssertion(:dataLocation :dataBehavior :node2)
+ObjectPropertyAssertion(Aspect(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents-aspects#T1>) :dataLocation :dataBehavior :node2)
 
 # Individual: :dataHabit (:dataHabit)
 
@@ -208,6 +380,7 @@ ClassAssertion(pronto:Data :dataHabit)
 ObjectPropertyAssertion(:allowedPurpose :dataHabit :advertising1)
 ObjectPropertyAssertion(:allowedPurpose :dataHabit :marketing1)
 ObjectPropertyAssertion(:allowedPurpose :dataHabit :optimization1)
+ObjectPropertyAssertion(:ownedBy :dataHabit :Bob)
 
 # Individual: :marketing1 (:marketing1)
 
@@ -219,60 +392,63 @@ ClassAssertion(:Server :node1)
 ObjectPropertyAssertion(:arc :node1 :node2)
 ObjectPropertyAssertion(:arc :node1 :node4)
 ObjectPropertyAssertion(:arc :node1 :node6)
-ObjectPropertyAssertion(:nodeRegion :node1 :CountryX)
 ObjectPropertyAssertion(:operatedBy :node1 :CompanyA)
+ObjectPropertyAssertion(:serverLocation :node1 :CountryX)
 
 # Individual: :node2 (:node2)
 
 ClassAssertion(:Server :node2)
 ObjectPropertyAssertion(:arc :node2 :node3)
-ObjectPropertyAssertion(:nodeRegion :node2 :CountryY)
 ObjectPropertyAssertion(:operatedBy :node2 :CompanyA)
+ObjectPropertyAssertion(:serverLocation :node2 :CountryY)
 
 # Individual: :node3 (:node3)
 
 ClassAssertion(:Server :node3)
 ObjectPropertyAssertion(:arc :node3 :node4)
 ObjectPropertyAssertion(:arc :node3 :node5)
-ObjectPropertyAssertion(:nodeRegion :node3 :CountryY)
 ObjectPropertyAssertion(:operatedBy :node3 :CompanyA)
+ObjectPropertyAssertion(:serverLocation :node3 :CountryY)
 
 # Individual: :node4 (:node4)
 
 ClassAssertion(:Server :node4)
 ObjectPropertyAssertion(:arc :node4 :node7)
-ObjectPropertyAssertion(:nodeRegion :node4 :CountryY)
 ObjectPropertyAssertion(:operatedBy :node4 :CompanyA)
+ObjectPropertyAssertion(:serverLocation :node4 :CountryY)
 
 # Individual: :node5 (:node5)
 
 ClassAssertion(:Server :node5)
 ObjectPropertyAssertion(:arc :node5 :node7)
-ObjectPropertyAssertion(:nodeRegion :node5 :CountryY)
 ObjectPropertyAssertion(:operatedBy :node5 :CompanyA)
+ObjectPropertyAssertion(:serverLocation :node5 :CountryY)
 
 # Individual: :node6 (:node6)
 
 ClassAssertion(:Server :node6)
 ObjectPropertyAssertion(:arc :node6 :node7)
-ObjectPropertyAssertion(:nodeRegion :node6 :CountryX)
 ObjectPropertyAssertion(:operatedBy :node6 :CompanyB)
+ObjectPropertyAssertion(:serverLocation :node6 :CountryX)
 
 # Individual: :node7 (:node7)
 
 ClassAssertion(:Server :node7)
-ObjectPropertyAssertion(:nodeRegion :node7 :CountryY)
 ObjectPropertyAssertion(:operatedBy :node7 :CompanyB)
+ObjectPropertyAssertion(:serverLocation :node7 :CountryY)
 
 # Individual: :optimization1 (:optimization1)
 
 ClassAssertion(:Optimization :optimization1)
 
 
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "S8"^^xsd:string) Body(ClassAtom(:ConsentAction Variable(:ca)) ObjectPropertyAtom(pwo:happened Variable(:ca) Variable(:t1)) ObjectPropertyAtom(:actedBy Variable(:ca) Variable(:ds)) ObjectPropertyAtom(pwo:produces Variable(:ca) Variable(:co)) ClassAtom(:Consent Variable(:co)) ObjectPropertyAtom(:allowsAction Variable(:co) Variable(:ac)) ObjectPropertyAtom(basicplanexecution:actionHasParticipant Variable(:ac) Variable(:org)) ObjectPropertyAtom(:hasSubject Variable(:ac) Variable(:data)) BuiltInAtom(aspectswrl:createOPA Variable(:collectsDataFrom) Variable(:org) Variable(:ds) Variable(:a)) BuiltInAtom(aspectswrl:temporal Variable(:a) Variable(time:after) Variable(:t1) "true"^^xsd:boolean))Head())
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node1) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node2))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "1"^^xsd:integer)))
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node2) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node3))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "2"^^xsd:integer)))
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node1) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node4))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "1"^^xsd:integer)))
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node1) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node6))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "1"^^xsd:integer)))
 DLSafeRule(Body(ObjectPropertyAtom(:arc Variable(<urn:swrl:var#Node1>) Variable(<urn:swrl:var#Node2>)))Head(ObjectPropertyAtom(:connected Variable(<urn:swrl:var#Node1>) Variable(<urn:swrl:var#Node2>))))
 DLSafeRule(Body(ObjectPropertyAtom(:arc Variable(<urn:swrl:var#Node2>) Variable(<urn:swrl:var#Node1>)))Head(ObjectPropertyAtom(:connected Variable(<urn:swrl:var#Node1>) Variable(<urn:swrl:var#Node2>))))
+
+
 )

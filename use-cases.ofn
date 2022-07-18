@@ -1,0 +1,31 @@
+Prefix(:=<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents-usecase12#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents-usecase12>
+Import(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents>)
+
+Declaration(NamedIndividual(:Alice))
+Declaration(NamedIndividual(:Cesar))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Alice (:Alice)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Alice <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Person> :Alice)
+
+# Individual: :Cesar (:Cesar)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Cesar <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Person> :Cesar)
+
+
+)

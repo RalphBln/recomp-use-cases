@@ -36,7 +36,6 @@ Import(<http://dana.fokus.fraunhofer.de/recomp/ontologies/gdpr>)
 
 Declaration(Class(:Advertising))
 Declaration(Class(:Analysis))
-Declaration(Class(:AnalyzerLocation))
 Declaration(Class(:Aspect))
 Declaration(Class(:Collect))
 Declaration(Class(:CompanyAAllowedToCollectBobsDataAspect))
@@ -47,6 +46,7 @@ Declaration(Class(:Deontic))
 Declaration(Class(:LegallyPermissible))
 Declaration(Class(:Marketing))
 Declaration(Class(:Optimization))
+Declaration(Class(:ProcessingLocation))
 Declaration(Class(:Resource))
 Declaration(Class(:Server))
 Declaration(ObjectProperty(:accessibilityRelation))
@@ -247,42 +247,42 @@ SubClassOf(pronto:Data ObjectExactCardinality(1 :dataLocation :Server))
 
 # Individual: :AnalysableAt_habit_marketing_node4 (:AnalysableAt_habit_marketing_node4)
 
-ClassAssertion(:AnalyzerLocation :AnalysableAt_habit_marketing_node4)
+ClassAssertion(:ProcessingLocation :AnalysableAt_habit_marketing_node4)
 ObjectPropertyAssertion(:hasData :AnalysableAt_habit_marketing_node4 :dataHabit)
 ObjectPropertyAssertion(:hasLocation :AnalysableAt_habit_marketing_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalysableAt_habit_marketing_node4 :marketing1)
 
 # Individual: :AnalyzableAt_behavior_advertising_node4 (:AnalyzableAt_behavior_advertising_node4)
 
-ClassAssertion(:AnalyzerLocation :AnalyzableAt_behavior_advertising_node4)
+ClassAssertion(:ProcessingLocation :AnalyzableAt_behavior_advertising_node4)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_advertising_node4 :dataBehavior)
 ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_advertising_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_advertising_node4 :advertising1)
 
 # Individual: :AnalyzableAt_behavior_marketing_node4 (:AnalyzableAt_behavior_marketing_node4)
 
-ClassAssertion(:AnalyzerLocation :AnalyzableAt_behavior_marketing_node4)
+ClassAssertion(:ProcessingLocation :AnalyzableAt_behavior_marketing_node4)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_marketing_node4 :dataBehavior)
 ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_marketing_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_marketing_node4 :marketing1)
 
 # Individual: :AnalyzableAt_behavior_optimizing_node6 (:AnalyzableAt_behavior_optimizing_node6)
 
-ClassAssertion(:AnalyzerLocation :AnalyzableAt_behavior_optimizing_node6)
+ClassAssertion(:ProcessingLocation :AnalyzableAt_behavior_optimizing_node6)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_optimizing_node6 :dataBehavior)
 ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_optimizing_node6 :node6)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_optimizing_node6 :optimization1)
 
 # Individual: :AnalyzableAt_habit_advertising_node4 (:AnalyzableAt_habit_advertising_node4)
 
-ClassAssertion(:AnalyzerLocation :AnalyzableAt_habit_advertising_node4)
+ClassAssertion(:ProcessingLocation :AnalyzableAt_habit_advertising_node4)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_habit_advertising_node4 :dataHabit)
 ObjectPropertyAssertion(:hasLocation :AnalyzableAt_habit_advertising_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_habit_advertising_node4 :advertising1)
 
 # Individual: :AnalyzableAt_habit_optimizing_node6 (:AnalyzableAt_habit_optimizing_node6)
 
-ClassAssertion(:AnalyzerLocation :AnalyzableAt_habit_optimizing_node6)
+ClassAssertion(:ProcessingLocation :AnalyzableAt_habit_optimizing_node6)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_habit_optimizing_node6 :dataHabit)
 ObjectPropertyAssertion(:hasLocation :AnalyzableAt_habit_optimizing_node6 :node6)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_habit_optimizing_node6 :optimization1)

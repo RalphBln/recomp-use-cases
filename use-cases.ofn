@@ -1,0 +1,116 @@
+Prefix(:=<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents-usecase12#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents-usecase12>
+Import(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents>)
+
+Declaration(NamedIndividual(:Alice))
+Declaration(NamedIndividual(:Cesar))
+Declaration(NamedIndividual(:DWP_Alice))
+Declaration(NamedIndividual(:DWP_Cesar))
+Declaration(NamedIndividual(:Data_Alice_Login_Credentials))
+Declaration(NamedIndividual(:IdP_Alice))
+Declaration(NamedIndividual(:IdP_Cesar))
+Declaration(NamedIndividual(:PictureApp))
+Declaration(NamedIndividual(:ProcessableAt_searchHistory_personalzation_node_SearchApp))
+Declaration(NamedIndividual(:SearchApp))
+Declaration(NamedIndividual(:node_DWP_Alice_1))
+Declaration(NamedIndividual(:node_DWP_Cesar_1))
+Declaration(NamedIndividual(:node_IdP_Alice_1))
+Declaration(NamedIndividual(:node_IdP_Cesar_1))
+Declaration(NamedIndividual(:node_PictureApp_1))
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Alice (:Alice)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Alice <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Person> :Alice)
+
+# Individual: :Cesar (:Cesar)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Cesar <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Person> :Cesar)
+
+# Individual: :DWP_Alice (:DWP_Alice)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :DWP_Alice <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation> :DWP_Alice)
+
+# Individual: :DWP_Cesar (:DWP_Cesar)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :DWP_Cesar <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation> :DWP_Cesar)
+
+# Individual: :Data_Alice_Login_Credentials (:Data_Alice_Login_Credentials)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Data_Alice_Login_Credentials <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<https://w3id.org/ontology/pronto#Data> :Data_Alice_Login_Credentials)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ownedBy> :Data_Alice_Login_Credentials :Alice)
+
+# Individual: :IdP_Alice (:IdP_Alice)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :IdP_Alice <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation> :IdP_Alice)
+
+# Individual: :IdP_Cesar (:IdP_Cesar)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :IdP_Cesar <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation> :IdP_Cesar)
+
+# Individual: :PictureApp (:PictureApp)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :PictureApp <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation> :PictureApp)
+
+# Individual: :ProcessableAt_searchHistory_personalzation_node_SearchApp (:ProcessableAt_searchHistory_personalzation_node_SearchApp)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ProcessableAt_searchHistory_personalzation_node_SearchApp <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ProcessingLocation> :ProcessableAt_searchHistory_personalzation_node_SearchApp)
+
+# Individual: :SearchApp (:SearchApp)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :SearchApp <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation> :SearchApp)
+
+# Individual: :node_DWP_Alice_1 (:node_DWP_Alice_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :node_DWP_Alice_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Server> :node_DWP_Alice_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#operatedBy> :node_DWP_Alice_1 :DWP_Alice)
+
+# Individual: :node_DWP_Cesar_1 (:node_DWP_Cesar_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :node_DWP_Cesar_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Server> :node_DWP_Cesar_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#operatedBy> :node_DWP_Cesar_1 :DWP_Cesar)
+
+# Individual: :node_IdP_Alice_1 (:node_IdP_Alice_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :node_IdP_Alice_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Server> :node_IdP_Alice_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#operatedBy> :node_IdP_Alice_1 :IdP_Alice)
+
+# Individual: :node_IdP_Cesar_1 (:node_IdP_Cesar_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :node_IdP_Cesar_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Server> :node_IdP_Cesar_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#operatedBy> :node_IdP_Cesar_1 :IdP_Cesar)
+
+# Individual: :node_PictureApp_1 (:node_PictureApp_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :node_PictureApp_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Server> :node_PictureApp_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#operatedBy> :node_PictureApp_1 :PictureApp)
+
+
+)

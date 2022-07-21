@@ -13,7 +13,9 @@ Declaration(NamedIndividual(:Alice))
 Declaration(NamedIndividual(:Cesar))
 Declaration(NamedIndividual(:DWP_Alice))
 Declaration(NamedIndividual(:DWP_Cesar))
-Declaration(NamedIndividual(:Data_Alice_Login_Credentials))
+Declaration(NamedIndividual(:Data_Alice_CatPicture))
+Declaration(NamedIndividual(:Data_Alice_LoginCredentials))
+Declaration(NamedIndividual(:Data_Alice_SearchHistory))
 Declaration(NamedIndividual(:IdP_Alice))
 Declaration(NamedIndividual(:IdP_Cesar))
 Declaration(NamedIndividual(:PictureApp))
@@ -51,11 +53,22 @@ ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :DWP_Cesar <http://orcid.org/0000-0002-4349-6726>)
 ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation> :DWP_Cesar)
 
-# Individual: :Data_Alice_Login_Credentials (:Data_Alice_Login_Credentials)
+# Individual: :Data_Alice_CatPicture (:Data_Alice_CatPicture)
 
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Data_Alice_Login_Credentials <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<https://w3id.org/ontology/pronto#Data> :Data_Alice_Login_Credentials)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ownedBy> :Data_Alice_Login_Credentials :Alice)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Data_Alice_CatPicture <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<https://w3id.org/ontology/pronto#Data> :Data_Alice_CatPicture)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ownedBy> :Data_Alice_CatPicture :Alice)
+
+# Individual: :Data_Alice_LoginCredentials (:Data_Alice_LoginCredentials)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Data_Alice_LoginCredentials <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<https://w3id.org/ontology/pronto#Data> :Data_Alice_LoginCredentials)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ownedBy> :Data_Alice_LoginCredentials :Alice)
+
+# Individual: :Data_Alice_SearchHistory (:Data_Alice_SearchHistory)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Data_Alice_SearchHistory <http://orcid.org/0000-0002-4349-6726>)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ownedBy> :Data_Alice_SearchHistory :Alice)
 
 # Individual: :IdP_Alice (:IdP_Alice)
 
@@ -76,6 +89,7 @@ ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ProcessableAt_searchHistory_personalzation_node_SearchApp <http://orcid.org/0000-0002-4349-6726>)
 ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ProcessingLocation> :ProcessableAt_searchHistory_personalzation_node_SearchApp)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#allowedOrganisation> :ProcessableAt_searchHistory_personalzation_node_SearchApp :SearchApp)
 
 # Individual: :SearchApp (:SearchApp)
 

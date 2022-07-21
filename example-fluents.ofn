@@ -51,8 +51,10 @@ Declaration(Class(:Resource))
 Declaration(Class(:Server))
 Declaration(ObjectProperty(:accessibilityRelation))
 Declaration(ObjectProperty(:actedBy))
-Declaration(ObjectProperty(:allowedLocation))
+Declaration(ObjectProperty(:allowedOrganisation))
 Declaration(ObjectProperty(:allowedPurpose))
+Declaration(ObjectProperty(:allowedRegion))
+Declaration(ObjectProperty(:allowedServer))
 Declaration(ObjectProperty(:allowsAction))
 Declaration(ObjectProperty(:arc))
 Declaration(ObjectProperty(:collectsDataFrom))
@@ -61,7 +63,6 @@ Declaration(ObjectProperty(:dataLocation))
 Declaration(ObjectProperty(:deletes))
 Declaration(ObjectProperty(:destination))
 Declaration(ObjectProperty(:hasData))
-Declaration(ObjectProperty(:hasLocation))
 Declaration(ObjectProperty(:hasPurpose))
 Declaration(ObjectProperty(:hasSubject))
 Declaration(ObjectProperty(:legallyAccepts))
@@ -117,13 +118,21 @@ AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :actedBy <http://o
 ObjectPropertyDomain(:actedBy pwo:Action)
 ObjectPropertyRange(:actedBy agentrole:Agent)
 
-# Object Property: :allowedLocation (:allowedLocation)
+# Object Property: :allowedOrganisation (:allowedOrganisation)
 
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :allowedLocation <http://orcid.org/0000-0002-4349-6726>)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :allowedOrganisation <http://orcid.org/0000-0002-4349-6726>)
 
 # Object Property: :allowedPurpose (:allowedPurpose)
 
 AnnotationAssertion(rdfs:comment :allowedPurpose "TODO: If we use Pronto, ask Monica how to model the fact that A has given permission to B to do C."^^xsd:string)
+
+# Object Property: :allowedRegion (:allowedRegion)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :allowedRegion <http://orcid.org/0000-0002-4349-6726>)
+
+# Object Property: :allowedServer (:allowedServer)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :allowedServer <http://orcid.org/0000-0002-4349-6726>)
 
 # Object Property: :allowsAction (:allowsAction)
 
@@ -232,6 +241,12 @@ SubClassOf(:Marketing pronto:Purpose)
 
 SubClassOf(:Optimization pronto:Purpose)
 
+# Class: :ProcessingLocation (:ProcessingLocation)
+
+SubClassOf(:ProcessingLocation ObjectUnionOf(ObjectSomeValuesFrom(:allowedOrganisation <http://www.estrellaproject.org/lkif-core/action.owl#Organisation>) ObjectSomeValuesFrom(:allowedRegion region:Region) ObjectSomeValuesFrom(:allowedServer :Server)))
+SubClassOf(:ProcessingLocation ObjectSomeValuesFrom(:hasData pronto:Data))
+SubClassOf(:ProcessingLocation ObjectSomeValuesFrom(:hasPurpose pronto:Purpose))
+
 # Class: :Server (:Server)
 
 SubClassOf(:Server :Resource)
@@ -248,43 +263,43 @@ SubClassOf(pronto:Data ObjectExactCardinality(1 :dataLocation :Server))
 # Individual: :AnalysableAt_habit_marketing_node4 (:AnalysableAt_habit_marketing_node4)
 
 ClassAssertion(:ProcessingLocation :AnalysableAt_habit_marketing_node4)
+ObjectPropertyAssertion(:allowedServer :AnalysableAt_habit_marketing_node4 :node4)
 ObjectPropertyAssertion(:hasData :AnalysableAt_habit_marketing_node4 :dataHabit)
-ObjectPropertyAssertion(:hasLocation :AnalysableAt_habit_marketing_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalysableAt_habit_marketing_node4 :marketing1)
 
 # Individual: :AnalyzableAt_behavior_advertising_node4 (:AnalyzableAt_behavior_advertising_node4)
 
 ClassAssertion(:ProcessingLocation :AnalyzableAt_behavior_advertising_node4)
+ObjectPropertyAssertion(:allowedServer :AnalyzableAt_behavior_advertising_node4 :node4)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_advertising_node4 :dataBehavior)
-ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_advertising_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_advertising_node4 :advertising1)
 
 # Individual: :AnalyzableAt_behavior_marketing_node4 (:AnalyzableAt_behavior_marketing_node4)
 
 ClassAssertion(:ProcessingLocation :AnalyzableAt_behavior_marketing_node4)
+ObjectPropertyAssertion(:allowedServer :AnalyzableAt_behavior_marketing_node4 :node4)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_marketing_node4 :dataBehavior)
-ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_marketing_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_marketing_node4 :marketing1)
 
 # Individual: :AnalyzableAt_behavior_optimizing_node6 (:AnalyzableAt_behavior_optimizing_node6)
 
 ClassAssertion(:ProcessingLocation :AnalyzableAt_behavior_optimizing_node6)
+ObjectPropertyAssertion(:allowedServer :AnalyzableAt_behavior_optimizing_node6 :node6)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_behavior_optimizing_node6 :dataBehavior)
-ObjectPropertyAssertion(:hasLocation :AnalyzableAt_behavior_optimizing_node6 :node6)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_behavior_optimizing_node6 :optimization1)
 
 # Individual: :AnalyzableAt_habit_advertising_node4 (:AnalyzableAt_habit_advertising_node4)
 
 ClassAssertion(:ProcessingLocation :AnalyzableAt_habit_advertising_node4)
+ObjectPropertyAssertion(:allowedServer :AnalyzableAt_habit_advertising_node4 :node4)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_habit_advertising_node4 :dataHabit)
-ObjectPropertyAssertion(:hasLocation :AnalyzableAt_habit_advertising_node4 :node4)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_habit_advertising_node4 :advertising1)
 
 # Individual: :AnalyzableAt_habit_optimizing_node6 (:AnalyzableAt_habit_optimizing_node6)
 
 ClassAssertion(:ProcessingLocation :AnalyzableAt_habit_optimizing_node6)
+ObjectPropertyAssertion(:allowedServer :AnalyzableAt_habit_optimizing_node6 :node6)
 ObjectPropertyAssertion(:hasData :AnalyzableAt_habit_optimizing_node6 :dataHabit)
-ObjectPropertyAssertion(:hasLocation :AnalyzableAt_habit_optimizing_node6 :node6)
 ObjectPropertyAssertion(:hasPurpose :AnalyzableAt_habit_optimizing_node6 :optimization1)
 
 # Individual: :Bob (:Bob)
@@ -442,6 +457,8 @@ ObjectPropertyAssertion(:serverLocation :node7 :CountryY)
 ClassAssertion(:Optimization :optimization1)
 
 
+SubObjectPropertyOf(ObjectPropertyChain(:allowedOrganisation ObjectInverseOf(:operatedBy)) :allowedServer)
+SubObjectPropertyOf(ObjectPropertyChain(:allowedRegion ObjectInverseOf(:serverLocation)) :allowedServer)
 DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "S8"^^xsd:string) Body(ClassAtom(:ConsentAction Variable(:ca)) ObjectPropertyAtom(pwo:happened Variable(:ca) Variable(:t1)) ObjectPropertyAtom(:actedBy Variable(:ca) Variable(:ds)) ObjectPropertyAtom(pwo:produces Variable(:ca) Variable(:co)) ClassAtom(:Consent Variable(:co)) ObjectPropertyAtom(:allowsAction Variable(:co) Variable(:ac)) ObjectPropertyAtom(basicplanexecution:actionHasParticipant Variable(:ac) Variable(:org)) ObjectPropertyAtom(:hasSubject Variable(:ac) Variable(:data)) BuiltInAtom(aspectswrl:createOPA Variable(:collectsDataFrom) Variable(:org) Variable(:ds) Variable(:a)))Head(BuiltInAtom(aspectswrl:temporal Variable(:a) Variable(time:after) Variable(:t1) "true"^^xsd:boolean)))
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node1) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node2))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "1"^^xsd:integer)))
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node2) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node3))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "2"^^xsd:integer)))

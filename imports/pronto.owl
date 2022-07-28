@@ -26,9 +26,6 @@
     <Prefix name="cpannotationschema" IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"/>
     <Import>http://purl.org/spar/pwo/2017-06-01</Import>
     <Declaration>
-        <Class IRI="http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="pwo:Workflow"/>
     </Declaration>
     <Declaration>
@@ -178,10 +175,6 @@
     <Declaration>
         <DataProperty IRI="#pseudonymized"/>
     </Declaration>
-    <SubClassOf>
-        <Class IRI="http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction"/>
-        <Class abbreviatedIRI="taskex:Action"/>
-    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="action:Organisation"/>
         <Class abbreviatedIRI="action:Agent"/>

@@ -42,6 +42,7 @@ Declaration(Class(:CompanyAAllowedToCollectBobsDataAspect))
 Declaration(Class(:Consent))
 Declaration(Class(:ContractBobCompanyAExistsAspect))
 Declaration(Class(:Country))
+Declaration(Class(:DemonstrateConsent))
 Declaration(Class(:Deontic))
 Declaration(Class(:LegallyPermissible))
 Declaration(Class(:Marketing))
@@ -224,6 +225,10 @@ EquivalentClasses(:ContractBobCompanyAExistsAspect ObjectIntersectionOf(ObjectUn
 
 SubClassOf(:Country region:Region)
 
+# Class: :DemonstrateConsent (:DemonstrateConsent)
+
+SubClassOf(:DemonstrateConsent taskexecution:Action)
+
 # Class: :Deontic (:Deontic)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Deontic <http://orcid.org/0000-0002-4349-6726>)
@@ -335,7 +340,7 @@ ClassAssertion(ObjectSomeValuesFrom(objectrole:hasRole pronto:Processor) :Compan
 # Individual: :ConsentActionBobMarketing1 (:ConsentActionBobMarketing1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentActionBobMarketing1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(:ConsentAction :ConsentActionBobMarketing1)
+ClassAssertion(:DemonstrateConsent :ConsentActionBobMarketing1)
 ObjectPropertyAssertion(:actedBy :ConsentActionBobMarketing1 :Bob)
 ObjectPropertyAssertion(pwo:happened :ConsentActionBobMarketing1 :T1)
 ObjectPropertyAssertion(pwo:produces :ConsentActionBobMarketing1 :ConsentBobMarketing1)
@@ -465,7 +470,7 @@ ClassAssertion(:Optimization :optimization1)
 
 SubObjectPropertyOf(ObjectPropertyChain(:allowedOrganisation ObjectInverseOf(:operatedBy)) :allowedServer)
 SubObjectPropertyOf(ObjectPropertyChain(:allowedRegion ObjectInverseOf(:serverLocation)) :allowedServer)
-DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "S8"^^xsd:string) Body(ClassAtom(:ConsentAction Variable(:ca)) ObjectPropertyAtom(pwo:happened Variable(:ca) Variable(:t1)) ObjectPropertyAtom(:actedBy Variable(:ca) Variable(:ds)) ObjectPropertyAtom(pwo:produces Variable(:ca) Variable(:co)) ClassAtom(:Consent Variable(:co)) ObjectPropertyAtom(:allowsAction Variable(:co) Variable(:ac)) ObjectPropertyAtom(basicplanexecution:actionHasParticipant Variable(:ac) Variable(:org)) ObjectPropertyAtom(:hasSubject Variable(:ac) Variable(:data)) BuiltInAtom(aspectswrl:createOPA Variable(:collectsDataFrom) Variable(:org) Variable(:ds) Variable(:a)))Head(BuiltInAtom(aspectswrl:temporal Variable(:a) Variable(time:after) Variable(:t1) "true"^^xsd:boolean)))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "S8"^^xsd:string) Body(ObjectPropertyAtom(basicplanexecution:actionHasParticipant Variable(:ac) Variable(:org)) ObjectPropertyAtom(:allowsAction Variable(:co) Variable(:ac)) ObjectPropertyAtom(pwo:happened Variable(:ca) Variable(:t1)) ClassAtom(:DemonstrateConsent Variable(:ca)) ObjectPropertyAtom(pwo:produces Variable(:ca) Variable(:co)) ClassAtom(:Consent Variable(:co)) ObjectPropertyAtom(:actedBy Variable(:ca) Variable(:ds)) ObjectPropertyAtom(:hasSubject Variable(:ac) Variable(:data)) BuiltInAtom(aspectswrl:createOPA Variable(:collectsDataFrom) Variable(:org) Variable(:ds) Variable(:a)))Head(BuiltInAtom(aspectswrl:temporal Variable(:a) Variable(time:after) Variable(:t1) "true"^^xsd:boolean)))
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node1) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node2))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "1"^^xsd:integer)))
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node2) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node3))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "2"^^xsd:integer)))
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node1) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node4))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "1"^^xsd:integer)))

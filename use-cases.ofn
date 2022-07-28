@@ -11,6 +11,22 @@ Import(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents>)
 
 Declaration(NamedIndividual(:Alice))
 Declaration(NamedIndividual(:Cesar))
+Declaration(NamedIndividual(:ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_RP1_Personal_Collect_Personalization_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_RP1_Personal_Derive_Analytics_1))
+Declaration(NamedIndividual(:ConsentAction_Alice_RP1_Personal_Store_Personalization_1))
+Declaration(NamedIndividual(:Consent_Alice_Storage_ServiceProvision))
 Declaration(NamedIndividual(:DWP_Alice))
 Declaration(NamedIndividual(:DWP_Cesar))
 Declaration(NamedIndividual(:Data_Alice_CatPicture))
@@ -19,8 +35,18 @@ Declaration(NamedIndividual(:Data_Alice_SearchHistory))
 Declaration(NamedIndividual(:IdP_Alice))
 Declaration(NamedIndividual(:IdP_Cesar))
 Declaration(NamedIndividual(:PictureApp))
-Declaration(NamedIndividual(:ProcessableAt_searchHistory_personalzation_node_SearchApp))
+Declaration(NamedIndividual(:ProcessableAt_searchHistory_personalization_node_SearchApp))
 Declaration(NamedIndividual(:SearchApp))
+Declaration(NamedIndividual(:StoreAction_Alices_CredentialsAndID_1))
+Declaration(NamedIndividual(:T_DC_1))
+Declaration(NamedIndividual(:T_DC_2))
+Declaration(NamedIndividual(:T_DC_3))
+Declaration(NamedIndividual(:T_DC_4))
+Declaration(NamedIndividual(:T_DC_5))
+Declaration(NamedIndividual(:T_DC_6))
+Declaration(NamedIndividual(:T_DC_7))
+Declaration(NamedIndividual(:T_DC_8))
+Declaration(NamedIndividual(:T_DC_9))
 Declaration(NamedIndividual(:node_DWP_Alice_1))
 Declaration(NamedIndividual(:node_DWP_Cesar_1))
 Declaration(NamedIndividual(:node_IdP_Alice_1))
@@ -42,6 +68,116 @@ ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Person> :Ali
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Cesar <http://orcid.org/0000-0002-4349-6726>)
 ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Person> :Cesar)
+
+# Individual: :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1 (:ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1 :T_DC_2)
+
+# Individual: :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1 (:ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1 :T_DC_2)
+
+# Individual: :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1 (:ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1 :T_DC_4)
+
+# Individual: :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1 (:ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1 :T_DC_4)
+
+# Individual: :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1 (:ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1 :T_DC_4)
+
+# Individual: :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1 (:ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1 :T_DC_4)
+
+# Individual: :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1 (:ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1 :T_DC_4)
+
+# Individual: :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1 (:ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1 :T_DC_4)
+
+# Individual: :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1 (:ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1 :T_DC_2)
+
+# Individual: :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1 (:ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1 :T_DC_2)
+
+# Individual: :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1 (:ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1 :T_DC_1)
+
+# Individual: :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1 (:ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1 :T_DC_1)
+
+# Individual: :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1 (:ConsentAction_Alice_RP1_Personal_Collect_Personalization_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1 :T_DC_3)
+
+# Individual: :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1 (:ConsentAction_Alice_RP1_Personal_Derive_Analytics_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1 :T_DC_3)
+
+# Individual: :ConsentAction_Alice_RP1_Personal_Store_Personalization_1 (:ConsentAction_Alice_RP1_Personal_Store_Personalization_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_RP1_Personal_Store_Personalization_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_RP1_Personal_Store_Personalization_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_RP1_Personal_Store_Personalization_1 :Alice)
+ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_RP1_Personal_Store_Personalization_1 :T_DC_3)
+
+# Individual: :Consent_Alice_Storage_ServiceProvision (:Consent_Alice_Storage_ServiceProvision)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Consent_Alice_Storage_ServiceProvision <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Consent> :Consent_Alice_Storage_ServiceProvision)
 
 # Individual: :DWP_Alice (:DWP_Alice)
 
@@ -85,16 +221,76 @@ ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :PictureApp <http://orcid.org/0000-0002-4349-6726>)
 ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation> :PictureApp)
 
-# Individual: :ProcessableAt_searchHistory_personalzation_node_SearchApp (:ProcessableAt_searchHistory_personalzation_node_SearchApp)
+# Individual: :ProcessableAt_searchHistory_personalization_node_SearchApp (:ProcessableAt_searchHistory_personalization_node_SearchApp)
 
-AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ProcessableAt_searchHistory_personalzation_node_SearchApp <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ProcessingLocation> :ProcessableAt_searchHistory_personalzation_node_SearchApp)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#allowedOrganisation> :ProcessableAt_searchHistory_personalzation_node_SearchApp :SearchApp)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ProcessableAt_searchHistory_personalization_node_SearchApp <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ProcessingLocation> :ProcessableAt_searchHistory_personalization_node_SearchApp)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#allowedOrganisation> :ProcessableAt_searchHistory_personalization_node_SearchApp :SearchApp)
 
 # Individual: :SearchApp (:SearchApp)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :SearchApp <http://orcid.org/0000-0002-4349-6726>)
 ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation> :SearchApp)
+
+# Individual: :StoreAction_Alices_CredentialsAndID_1 (:StoreAction_Alices_CredentialsAndID_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :StoreAction_Alices_CredentialsAndID_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<https://w3id.org/ontology/pronto#Store> :StoreAction_Alices_CredentialsAndID_1)
+ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#hasSubject> :StoreAction_Alices_CredentialsAndID_1 :Data_Alice_LoginCredentials)
+ObjectPropertyAssertion(<http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#actionHasParticipant> :StoreAction_Alices_CredentialsAndID_1 :IdP_Alice)
+
+# Individual: :T_DC_1 (:T_DC_1)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :T_DC_1 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.w3.org/2006/time#Instant> :T_DC_1)
+
+# Individual: :T_DC_2 (:T_DC_2)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :T_DC_2 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.w3.org/2006/time#Instant> :T_DC_2)
+ObjectPropertyAssertion(<http://www.w3.org/2006/time#after> :T_DC_2 :T_DC_1)
+
+# Individual: :T_DC_3 (:T_DC_3)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :T_DC_3 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.w3.org/2006/time#Instant> :T_DC_3)
+ObjectPropertyAssertion(<http://www.w3.org/2006/time#after> :T_DC_3 :T_DC_2)
+
+# Individual: :T_DC_4 (:T_DC_4)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :T_DC_4 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.w3.org/2006/time#Instant> :T_DC_4)
+ObjectPropertyAssertion(<http://www.w3.org/2006/time#after> :T_DC_4 :T_DC_3)
+
+# Individual: :T_DC_5 (:T_DC_5)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :T_DC_5 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.w3.org/2006/time#Instant> :T_DC_5)
+ObjectPropertyAssertion(<http://www.w3.org/2006/time#after> :T_DC_5 :T_DC_4)
+
+# Individual: :T_DC_6 (:T_DC_6)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :T_DC_6 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.w3.org/2006/time#Instant> :T_DC_6)
+ObjectPropertyAssertion(<http://www.w3.org/2006/time#after> :T_DC_6 :T_DC_5)
+
+# Individual: :T_DC_7 (:T_DC_7)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :T_DC_7 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.w3.org/2006/time#Instant> :T_DC_7)
+ObjectPropertyAssertion(<http://www.w3.org/2006/time#after> :T_DC_7 :T_DC_6)
+
+# Individual: :T_DC_8 (:T_DC_8)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :T_DC_8 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.w3.org/2006/time#Instant> :T_DC_8)
+ObjectPropertyAssertion(<http://www.w3.org/2006/time#after> :T_DC_8 :T_DC_7)
+
+# Individual: :T_DC_9 (:T_DC_9)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :T_DC_9 <http://orcid.org/0000-0002-4349-6726>)
+ClassAssertion(<http://www.w3.org/2006/time#Instant> :T_DC_9)
+ObjectPropertyAssertion(<http://www.w3.org/2006/time#after> :T_DC_9 :T_DC_8)
 
 # Individual: :node_DWP_Alice_1 (:node_DWP_Alice_1)
 

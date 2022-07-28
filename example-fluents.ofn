@@ -49,6 +49,7 @@ Declaration(Class(:Optimization))
 Declaration(Class(:ProcessingLocation))
 Declaration(Class(:Resource))
 Declaration(Class(:Server))
+Declaration(Class(:Service_Provision))
 Declaration(ObjectProperty(:accessibilityRelation))
 Declaration(ObjectProperty(:actedBy))
 Declaration(ObjectProperty(:allowedOrganisation))
@@ -250,6 +251,11 @@ SubClassOf(:ProcessingLocation ObjectSomeValuesFrom(:hasPurpose pronto:Purpose))
 # Class: :Server (:Server)
 
 SubClassOf(:Server :Resource)
+
+# Class: :Service_Provision (:Service_Provision)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Service_Provision <http://orcid.org/0000-0002-4349-6726>)
+SubClassOf(:Service_Provision pronto:Purpose)
 
 # Class: pronto:Data (pronto:Data)
 

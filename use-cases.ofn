@@ -1,4 +1,5 @@
 Prefix(:=<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents-usecase12#>)
+Prefix(ex:=<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -72,112 +73,112 @@ ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Person> :Ces
 # Individual: :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1 (:ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Personal_Store_ServiceProvision_1 :T_DC_2)
 
 # Individual: :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1 (:ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Personal_Transmit_ServiceProvision_1 :T_DC_2)
 
 # Individual: :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1 (:ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Picture_Read_Bob_ServiceProvision_1 :T_DC_4)
 
 # Individual: :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1 (:ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Picture_Read_Cesar_ServiceProvision_1 :T_DC_4)
 
 # Individual: :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1 (:ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Picture_Store_ServiceProvision_1 :T_DC_4)
 
 # Individual: :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1 (:ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_Picture_Transmit_ServiceProvision_1 :T_DC_4)
 
 # Individual: :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1 (:ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_WebID_Read_Bob_ServiceProvision_1 :T_DC_4)
 
 # Individual: :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1 (:ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_WebID_Read_Cesar_ServiceProvision_1 :T_DC_4)
 
 # Individual: :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1 (:ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_WebID_Store_ServiceProvision_1 :T_DC_2)
 
 # Individual: :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1 (:ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_DWP_WebID_Transmit_ServiceProvision_1 :T_DC_2)
 
 # Individual: :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1 (:ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_IdP_Credentials_Store_ServiceProvision_1 :T_DC_1)
 
 # Individual: :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1 (:ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_IdP_OpenID_Store_ServiceProvision_1 :T_DC_1)
 
 # Individual: :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1 (:ConsentAction_Alice_RP1_Personal_Collect_Personalization_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_RP1_Personal_Collect_Personalization_1 :T_DC_3)
 
 # Individual: :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1 (:ConsentAction_Alice_RP1_Personal_Derive_Analytics_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_RP1_Personal_Derive_Analytics_1 :T_DC_3)
 
 # Individual: :ConsentAction_Alice_RP1_Personal_Store_Personalization_1 (:ConsentAction_Alice_RP1_Personal_Store_Personalization_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ConsentAction_Alice_RP1_Personal_Store_Personalization_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ConsentAction> :ConsentAction_Alice_RP1_Personal_Store_Personalization_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#actedBy> :ConsentAction_Alice_RP1_Personal_Store_Personalization_1 :Alice)
+ClassAssertion(ex:DemonstrateConsent :ConsentAction_Alice_RP1_Personal_Store_Personalization_1)
+ObjectPropertyAssertion(ex:actedBy :ConsentAction_Alice_RP1_Personal_Store_Personalization_1 :Alice)
 ObjectPropertyAssertion(<http://purl.org/spar/pwo/happened> :ConsentAction_Alice_RP1_Personal_Store_Personalization_1 :T_DC_3)
 
 # Individual: :Consent_Alice_Storage_ServiceProvision (:Consent_Alice_Storage_ServiceProvision)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Consent_Alice_Storage_ServiceProvision <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Consent> :Consent_Alice_Storage_ServiceProvision)
+ClassAssertion(ex:Consent :Consent_Alice_Storage_ServiceProvision)
 
 # Individual: :DWP_Alice (:DWP_Alice)
 
@@ -193,18 +194,18 @@ ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Data_Alice_CatPicture <http://orcid.org/0000-0002-4349-6726>)
 ClassAssertion(<https://w3id.org/ontology/pronto#Data> :Data_Alice_CatPicture)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ownedBy> :Data_Alice_CatPicture :Alice)
+ObjectPropertyAssertion(ex:ownedBy :Data_Alice_CatPicture :Alice)
 
 # Individual: :Data_Alice_LoginCredentials (:Data_Alice_LoginCredentials)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Data_Alice_LoginCredentials <http://orcid.org/0000-0002-4349-6726>)
 ClassAssertion(<https://w3id.org/ontology/pronto#Data> :Data_Alice_LoginCredentials)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ownedBy> :Data_Alice_LoginCredentials :Alice)
+ObjectPropertyAssertion(ex:ownedBy :Data_Alice_LoginCredentials :Alice)
 
 # Individual: :Data_Alice_SearchHistory (:Data_Alice_SearchHistory)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Data_Alice_SearchHistory <http://orcid.org/0000-0002-4349-6726>)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ownedBy> :Data_Alice_SearchHistory :Alice)
+ObjectPropertyAssertion(ex:ownedBy :Data_Alice_SearchHistory :Alice)
 
 # Individual: :IdP_Alice (:IdP_Alice)
 
@@ -224,8 +225,8 @@ ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation
 # Individual: :ProcessableAt_searchHistory_personalization_node_SearchApp (:ProcessableAt_searchHistory_personalization_node_SearchApp)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :ProcessableAt_searchHistory_personalization_node_SearchApp <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#ProcessingLocation> :ProcessableAt_searchHistory_personalization_node_SearchApp)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#allowedOrganisation> :ProcessableAt_searchHistory_personalization_node_SearchApp :SearchApp)
+ClassAssertion(ex:ProcessingLocation :ProcessableAt_searchHistory_personalization_node_SearchApp)
+ObjectPropertyAssertion(ex:allowedOrganisation :ProcessableAt_searchHistory_personalization_node_SearchApp :SearchApp)
 
 # Individual: :SearchApp (:SearchApp)
 
@@ -236,7 +237,7 @@ ClassAssertion(<http://www.estrellaproject.org/lkif-core/action.owl#Organisation
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :StoreAction_Alices_CredentialsAndID_1 <http://orcid.org/0000-0002-4349-6726>)
 ClassAssertion(<https://w3id.org/ontology/pronto#Store> :StoreAction_Alices_CredentialsAndID_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#hasSubject> :StoreAction_Alices_CredentialsAndID_1 :Data_Alice_LoginCredentials)
+ObjectPropertyAssertion(ex:hasSubject :StoreAction_Alices_CredentialsAndID_1 :Data_Alice_LoginCredentials)
 ObjectPropertyAssertion(<http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#actionHasParticipant> :StoreAction_Alices_CredentialsAndID_1 :IdP_Alice)
 
 # Individual: :T_DC_1 (:T_DC_1)
@@ -295,32 +296,32 @@ ObjectPropertyAssertion(<http://www.w3.org/2006/time#after> :T_DC_9 :T_DC_8)
 # Individual: :node_DWP_Alice_1 (:node_DWP_Alice_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :node_DWP_Alice_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Server> :node_DWP_Alice_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#operatedBy> :node_DWP_Alice_1 :DWP_Alice)
+ClassAssertion(ex:Server :node_DWP_Alice_1)
+ObjectPropertyAssertion(ex:operatedBy :node_DWP_Alice_1 :DWP_Alice)
 
 # Individual: :node_DWP_Cesar_1 (:node_DWP_Cesar_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :node_DWP_Cesar_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Server> :node_DWP_Cesar_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#operatedBy> :node_DWP_Cesar_1 :DWP_Cesar)
+ClassAssertion(ex:Server :node_DWP_Cesar_1)
+ObjectPropertyAssertion(ex:operatedBy :node_DWP_Cesar_1 :DWP_Cesar)
 
 # Individual: :node_IdP_Alice_1 (:node_IdP_Alice_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :node_IdP_Alice_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Server> :node_IdP_Alice_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#operatedBy> :node_IdP_Alice_1 :IdP_Alice)
+ClassAssertion(ex:Server :node_IdP_Alice_1)
+ObjectPropertyAssertion(ex:operatedBy :node_IdP_Alice_1 :IdP_Alice)
 
 # Individual: :node_IdP_Cesar_1 (:node_IdP_Cesar_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :node_IdP_Cesar_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Server> :node_IdP_Cesar_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#operatedBy> :node_IdP_Cesar_1 :IdP_Cesar)
+ClassAssertion(ex:Server :node_IdP_Cesar_1)
+ObjectPropertyAssertion(ex:operatedBy :node_IdP_Cesar_1 :IdP_Cesar)
 
 # Individual: :node_PictureApp_1 (:node_PictureApp_1)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :node_PictureApp_1 <http://orcid.org/0000-0002-4349-6726>)
-ClassAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#Server> :node_PictureApp_1)
-ObjectPropertyAssertion(<http://dana.fokus.fraunhofer.de/recomp/ontologies/example-fluents#operatedBy> :node_PictureApp_1 :PictureApp)
+ClassAssertion(ex:Server :node_PictureApp_1)
+ObjectPropertyAssertion(ex:operatedBy :node_PictureApp_1 :PictureApp)
 
 
 )

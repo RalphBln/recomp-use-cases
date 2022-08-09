@@ -48,6 +48,7 @@ Declaration(Class(:LegallyPermissible))
 Declaration(Class(:Marketing))
 Declaration(Class(:Optimization))
 Declaration(Class(:ProcessingLocation))
+Declaration(Class(:Reality))
 Declaration(Class(:Resource))
 Declaration(Class(:Server))
 Declaration(Class(:Service_Provision))
@@ -252,6 +253,10 @@ SubClassOf(:Optimization pronto:Purpose)
 SubClassOf(:ProcessingLocation ObjectUnionOf(ObjectSomeValuesFrom(:allowedOrganisation <http://www.estrellaproject.org/lkif-core/action.owl#Organisation>) ObjectSomeValuesFrom(:allowedRegion region:Region) ObjectSomeValuesFrom(:allowedServer :Server)))
 SubClassOf(:ProcessingLocation ObjectSomeValuesFrom(:hasData pronto:Data))
 SubClassOf(:ProcessingLocation ObjectSomeValuesFrom(:hasPurpose pronto:Purpose))
+
+# Class: :Reality (:Reality)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Reality <http://orcid.org/0000-0002-4349-6726>)
 
 # Class: :Server (:Server)
 

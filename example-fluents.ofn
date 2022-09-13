@@ -50,6 +50,7 @@ Declaration(Class(:Optimization))
 Declaration(Class(:ProcessingLocation))
 Declaration(Class(:Reality))
 Declaration(Class(:Resource))
+Declaration(Class(:RevokeConsent))
 Declaration(Class(:Server))
 Declaration(Class(:Service_Provision))
 Declaration(ObjectProperty(:accessibilityRelation))
@@ -257,6 +258,11 @@ SubClassOf(:ProcessingLocation ObjectSomeValuesFrom(:hasPurpose pronto:Purpose))
 # Class: :Reality (:Reality)
 
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :Reality <http://orcid.org/0000-0002-4349-6726>)
+
+# Class: :RevokeConsent (:RevokeConsent)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> :RevokeConsent <http://orcid.org/0000-0002-4349-6726>)
+SubClassOf(:RevokeConsent taskexecution:Action)
 
 # Class: :Server (:Server)
 
@@ -476,6 +482,7 @@ ClassAssertion(:Optimization :optimization1)
 SubObjectPropertyOf(ObjectPropertyChain(:allowedOrganisation ObjectInverseOf(:operatedBy)) :allowedServer)
 SubObjectPropertyOf(ObjectPropertyChain(:allowedRegion ObjectInverseOf(:serverLocation)) :allowedServer)
 DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "S8"^^xsd:string) Body(ObjectPropertyAtom(basicplanexecution:actionHasParticipant Variable(:ac) Variable(:org)) ObjectPropertyAtom(:allowsAction Variable(:co) Variable(:ac)) ObjectPropertyAtom(pwo:happened Variable(:ca) Variable(:t1)) ClassAtom(:DemonstrateConsent Variable(:ca)) ObjectPropertyAtom(pwo:produces Variable(:ca) Variable(:co)) ClassAtom(:Consent Variable(:co)) ObjectPropertyAtom(:actedBy Variable(:ca) Variable(:ds)) ObjectPropertyAtom(:hasSubject Variable(:ac) Variable(:data)) BuiltInAtom(aspectswrl:createOPA Variable(:collectsDataFrom) Variable(:org) Variable(:ds) Variable(:a)))Head(BuiltInAtom(aspectswrl:temporal Variable(:a) Variable(time:after) Variable(:t1) "true"^^xsd:boolean)))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "S9"^^xsd:string) Body(ObjectPropertyAtom(basicplanexecution:actionHasParticipant Variable(:ac) Variable(:org)) ObjectPropertyAtom(:allowsAction Variable(:co) Variable(:ac)) ObjectPropertyAtom(pwo:happened Variable(:ca) Variable(:t1)) ClassAtom(:RevokeConsent Variable(:ca)) ObjectPropertyAtom(:deletes Variable(:ca) Variable(:co)) ClassAtom(:Consent Variable(:co)) ObjectPropertyAtom(:actedBy Variable(:ca) Variable(:ds)) ObjectPropertyAtom(:hasSubject Variable(:ac) Variable(:data)) BuiltInAtom(aspectswrl:createOPA Variable(:collectsDataFrom) Variable(:org) Variable(:ds) Variable(:a)))Head(BuiltInAtom(aspectswrl:temporal Variable(:a) Variable(time:after) Variable(:t1) "true"^^xsd:boolean)))
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node1) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node2))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "1"^^xsd:integer)))
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node2) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node3))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "2"^^xsd:integer)))
 DLSafeRule(Body(ClassAtom(pronto:Transmit Variable(<urn:swrl:var#t>)) ObjectPropertyAtom(:origin Variable(<urn:swrl:var#t>) :node1) ObjectPropertyAtom(:destination Variable(<urn:swrl:var#t>) :node4))Head(DataPropertyAtom(:cost Variable(<urn:swrl:var#t>) "1"^^xsd:integer)))
